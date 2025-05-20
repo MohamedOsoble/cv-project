@@ -1,6 +1,8 @@
 const dataFields = {
+
     general: {
-        formFields : [{
+
+        formFields: [{
             id: 'fName',
             name: 'fName',
             type: 'text',
@@ -41,21 +43,31 @@ const dataFields = {
             inputType: 'input'
         }],
 
-        formInfo : {
+        formInfo: {
             fName: '',
             lName: '',
             email: '',
             phone: '',
             location: '',
         },
+
+        multiEntry: false,
+        entries: [],
+        entryTitles: {
+            fName: 'First Name: ',
+            lName: 'Last Name: ',
+            email: 'Email Address: ',
+            phone: 'Phone Number: ',
+            location: 'Located at: ',
+        },
     },
-        
+
     education: {
-        formFields : [{
+        formFields: [{
             id: 'school',
             name: 'schoolName',
             type: 'text',
-            placeholder: 'schoolName',
+            placeholder: 'School Name',
             labelContext: 'School Name:',
             inputType: 'input'
         },
@@ -83,19 +95,27 @@ const dataFields = {
             labelContext: 'Graduation Date:',
             inputType: 'input'
         },
-    ],
+        ],
 
-        formInfo : {
+        formInfo: {
             schoolName: '',
             subjectName: '',
             grade: '',
             graduationDate: '',
-            location: '',
         },
+
+        multiEntry: false,
+        entries: [],
+        entryTitles: {
+            schoolName: 'School Name: ',
+            subjectName: 'Subject: ',
+            grade: 'Grade: ',
+            graduationDate: 'Graduated on: ',
+        }
     },
 
     work: {
-        formFields : [{
+        formFields: [{
             id: 'company',
             name: 'company',
             type: 'text',
@@ -136,13 +156,26 @@ const dataFields = {
             inputType: 'input'
         }],
 
-        formInfo : {
-            fName: '',
-            lName: '',
-            email: '',
-            phone: '',
-            location: '',
+        formInfo: {
+            id: '',
+            company: '',
+            position: '',
+            responsibilities: '',
+            fromDate: '',
+            toDate: '',
         },
+
+        multiEntry: false,
+        entries: [
+        ],
+        entryTitles: {
+            company: 'Company: ',
+            position: 'Position: ',
+            responsibilities: 'Responsibilities: ',
+            fromDate: 'Started on: ',
+            toDate: 'Ended on: ',
+        }
+
     }
 
 

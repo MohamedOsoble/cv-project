@@ -1,22 +1,25 @@
-import { useState } from 'react'
-import reactLogo from '../assets/react.svg'
-import viteLogo from '/vite.svg'
 import '../styles/App.css'
-import GenerateForm from './generator'
-import dataFields from '../../utils/datafields'
+import General from './General'
+import Multiwork from './MultiWork'
+import Education from './Education'
+import Singlework from './Singlework'
 
 function App() {
 
-  let htmlFields = <></>
-
   return (
-  <>
-  {
-    Object.entries(dataFields).map((key, value) => (
-      GenerateForm(key[0])
-  ))
-  }
-  </>
+
+    <div id='parent-container' className='container'>
+      <h1>CV Application</h1>
+      <General>
+        <h2 id='general-label'>General Information: </h2>
+        </General>
+      <Education>
+        <h2 id='education-label'>Education: </h2>
+        </Education>
+      <Singlework>
+        <h2 id='work-label'>Work History: </h2>
+        </Singlework>
+    </div>
   )
 }
 
